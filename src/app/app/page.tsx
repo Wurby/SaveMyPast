@@ -15,7 +15,7 @@ export default function App() {
     const signInWithClerk = async () => {
       const auth = getAuth();
       const token = await getToken({ template: "integration_firebase" });
-      const userCredentials = await signInWithCustomToken(auth, token);
+      const userCredentials = await signInWithCustomToken(auth, token!);
 
       /**
        * The userCredentials.user object will call the methods of
