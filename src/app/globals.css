@@ -1,27 +1,32 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  h1 {
+    @apply text-center text-4xl font-thin;
+  }
+  h2 {
+    @apply text-center text-2xl font-thin;
+  }
+  h3 {
+    @apply text-center text-xl font-extralight;
+  }
+  h4 {
+    @apply text-center text-lg font-light;
+  }
+  h5 {
+    @apply text-center text-sm font-medium;
+  }
+  h6 {
+    @apply text-center text-xs font-medium;
+  }
+  p {
+    @apply text-base font-light;
+  }
+  a {
+    @apply text-blue-300 underline hover:text-blue-400;
+  }
+  button > a {
+    @apply text-white no-underline;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+@tailwind components;
+@tailwind utilities;
