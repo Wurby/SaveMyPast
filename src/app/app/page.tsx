@@ -25,7 +25,7 @@ export default function App() {
     };
 
     signInWithClerk();
-  }, []);
+  }, [getToken]);
 
   return (
     <>
