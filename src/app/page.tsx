@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { HorizontalDivider } from "../components/Divider";
+import Image from "next/image";
+import remember from "../../public/remember.jpeg";
 
 export default function Home() {
   return (
@@ -23,16 +25,26 @@ export default function Home() {
             access it.
           </p>
         </div>
+        <Image
+          alt="A woman remembering her past"
+          src={remember}
+          className="border border-slate-500 md:hidden"
+        ></Image>
         <div className="flex flex-col gap-2 border border-slate-500 px-8 py-4 md:w-5/12">
-          <h3>Find inspiration using our custom writing prompts</h3>
+          <h3>Get help remembering it all</h3>
           <p>
-            Our artificial intelligence powered prompter will analyze your story
-            as you tell it and prompt you with intelligent follow up questions
-            to ensure every detail you want to remember is saved. All it takes
-            to start is to begin with a memory you want to save, or answer one
-            of our pre-made prompts.
+            SaveMyPast&#39;s artificial intelligence powered prompter will
+            analyze your story as you tell it and prompt you with intelligent
+            follow up questions to ensure every detail you want to remember is
+            saved. All it takes to start is to begin with a memory you want to
+            save, or answer one of our pre-made prompts.
           </p>
         </div>
+        <Image
+          alt="A woman remembering her past"
+          src={remember}
+          className="hidden w-96 border border-slate-500 md:block"
+        ></Image>
         <h5 className="w-full py-12">
           Get started today by <Link href="/app">Creating your account</Link>
         </h5>
