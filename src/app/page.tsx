@@ -33,7 +33,7 @@ export default function Home() {
             of our pre-made prompts.
           </p>
         </div>
-        <h5 className="w-full p-12">
+        <h5 className="w-full py-12">
           Get started today by <Link href="/app">Creating your account</Link>
         </h5>
       </section>
