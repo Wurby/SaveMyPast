@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
-import Button from "@/components/Button";
+import { ButtonLink } from "@/components/Button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,11 +28,11 @@ export default function RootLayout({
           </main>
           <footer className="align-center flex w-full justify-center">
             <nav className="flex items-center justify-center gap-4 px-4">
-              <Button href="/app">App</Button>
+              <ButtonLink href="/app">App</ButtonLink>
               <>
                 <UserButton afterSignOutUrl="/" />
               </>
-              <Button href="/">Home</Button>
+              <ButtonLink href="/">Home</ButtonLink>
             </nav>
           </footer>
         </body>
